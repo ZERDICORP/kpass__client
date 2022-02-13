@@ -1,4 +1,4 @@
-./clr
+rr *.class
 
 main_class_dir="com/kpass/www"
 
