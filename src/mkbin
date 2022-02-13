@@ -1,0 +1,17 @@
+if test -f "$USR_BIN/kpass"; then
+  echo "[exit]: kpass already exists in $USR_BIN"
+  exit 0
+fi
+
+cwd=$(pwd)
+
+mkdir -p $USR_BIN
+
+echo "cwd=\$(pwd)" >> $USR_BIN/kpass
+echo "cd $cwd" >> $USR_BIN/kpass
+echo "./run \$@" >> $USR_BIN/kpass
+echo "cd \$cwd" >> $USR_BIN/kpass
+
+echo "--- TEST ---"
+
+chmod +x $USR_BIN/kpass && kpass
