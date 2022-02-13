@@ -1,0 +1,13 @@
+recursively_delete_class_files()
+{
+	find . -type f -name '*.class' -delete
+}
+
+cur="$PWD"
+cd ~/Coding/projects/src/java/kpass/kpass-client/src
+
+java -cp .:lib/* Main $@
+
+recursively_delete_class_files
+
+cd "$cur"
