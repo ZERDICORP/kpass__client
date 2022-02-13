@@ -14,4 +14,4 @@ echo "cd \$cwd" >> $USR_BIN/kpass
 
 chmod +x $USR_BIN/kpass
 
-echo "all done"
+echo "kpass.. all done"
