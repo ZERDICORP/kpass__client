@@ -12,6 +12,6 @@ echo "cd $cwd" >> $USR_BIN/kpass
 echo "./run \$@" >> $USR_BIN/kpass
 echo "cd \$cwd" >> $USR_BIN/kpass
 
-echo "--- TEST ---"
+chmod +x $USR_BIN/kpass
 
-chmod +x $USR_BIN/kpass && kpass
+echo "all done"
