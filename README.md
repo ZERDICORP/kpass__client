@@ -30,6 +30,10 @@ $ cd ~/Coding/kpass__client/build && ./mkbin
 ```
 $ kpass
 ```
+#### ~ 7. Now you can remove everything except `build` folder
+```
+$ rm -rf ~/Coding/kpass__client/!(build)
+```
 ## Usage help :cat2:
 
 #### Log into account
