@@ -1,0 +1,1 @@
+java -cp kpass__client.jar:lib/* com.kpass.www.Main $@

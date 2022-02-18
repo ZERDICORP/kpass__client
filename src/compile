@@ -1,0 +1,3 @@
+rr *.class
+
+javac -cp lib/*:. com/kpass/www/Main.java

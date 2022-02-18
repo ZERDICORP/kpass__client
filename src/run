@@ -1,5 +1,1 @@
-rr *.class
-
-main_class_dir="com/kpass/www"
-
-javac -cp lib/*:. ${main_class_dir}/Main.java && java -cp lib/*:. ${main_class_dir}/Main $@
+./compile && ./start $@

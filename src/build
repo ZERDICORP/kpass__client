@@ -1,0 +1,2 @@
+./compile
+cp -r lib/ ../build/ && jar -cfe ../build/kpass__client.jar com.kpass.www.Main .
