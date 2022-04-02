@@ -5,6 +5,8 @@ import zer.file.FTool;
 
 public class Config
 {
+	public static String host;
+	public static int port;
 	public static final String sessionFilePath = ".session";
 	public static final Boolean session = FTool.exists(sessionFilePath);
 	public static String password;

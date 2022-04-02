@@ -1,5 +1,7 @@
 package com.kpass.www;
 
+import config.Config;
+import tools.ConfigLoader;
 import zer.http.HTTPConfig;
 import java.util.Scanner;
 import zer.cmd.CMDHandler;
@@ -18,8 +20,10 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		HTTPConfig.setHost("188.187.188.37");
-		HTTPConfig.setPort(83);
+		ConfigLoader.load(Config.class, "resources/app.cfg");
+
+		HTTPConfig.setHost(Config.host);
+		HTTPConfig.setPort(Config.port);
 
 		CMDHandler handler = new CMDHandler();
 		

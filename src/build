@@ -1,2 +1,33 @@
-./compile
-cp -r lib/ ../build/ && jar -cfe ../build/kpass__client.jar com.kpass.www.Main .
+javac -cp lib/*:. com/kpass/www/Main.java
+
+mkdir -p ../build
+
+cp -r lib/ ../build/
+cp -r resources/ ../build/
+
+jar -cfe ../build/kpass__client.jar com.kpass.www.Main .
+
+echo "java -cp kpass__client.jar:lib/* com.kpass.www.Main \$@" > ../build/run
+
+chmod +x ../build/run
+
+touch ../build/mkbin
+cat >../build/mkbin <<EOL
+if test -f "$USR_BIN/kpass"; then
+  echo "[exit]: kpass already exists in $USR_BIN"
+  exit 0
+fi
+
+cwd=\$(pwd)
+
+echo "cwd=\\\$(pwd)" >> $USR_BIN/kpass
+echo "cd \$cwd" >> $USR_BIN/kpass
+echo "./run \\\$@" >> $USR_BIN/kpass
+echo "cd \\\$cwd" >> $USR_BIN/kpass
+
+chmod +x $USR_BIN/kpass
+
+echo "kpass.. all done" 
+EOL
+
+chmod +x ../build/mkbin

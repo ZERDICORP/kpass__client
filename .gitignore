@@ -1,5 +1,5 @@
 *.class
+
 .session
-build/*
-!build/mkbin
-!build/run
+
+build/
