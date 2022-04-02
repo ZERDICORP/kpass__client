@@ -1,5 +1,5 @@
 # kpass__client :peach:
-#### Application for keeping logins and passwords.
+#### Client for KPASS API.
 
 ## Getting started :fearful:
 
@@ -30,7 +30,14 @@ $ cd ~/Coding/kpass__client/build && ./mkbin
 ```
 $ kpass
 ```
-#### ~ 7. Now you can remove everything except `build` folder
+#### ~ 7. In the `resources/app.cfg` file, you can specify the host and port
+> By default my server
+```
+$ cat ~/Coding/kpass__client/build/resources/app.cfg
+port = 83
+host = 188.187.188.37
+```
+#### ~ 8. Now you can remove everything except `build` folder
 ```
 $ rm -rf ~/Coding/kpass__client/{,.[!.],..?}!(build)
 ```
