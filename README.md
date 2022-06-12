@@ -1,5 +1,5 @@
 # kpass__client :peach:
-#### Client for KPASS API.
+#### Client for [KPASS API](https://github.com/ZERDICORP/kpass__server).
 
 ## Getting started :fearful:
 
