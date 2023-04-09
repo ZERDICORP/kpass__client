@@ -35,7 +35,7 @@ $ kpass
 ```
 $ cat ~/Coding/kpass__client/build/resources/app.cfg
 port = 83
-host = 188.187.188.37
+host = 95.165.89.228
 ```
 #### ~ 8. Now you can remove everything except `build` folder
 ```
